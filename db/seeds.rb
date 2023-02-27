@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+5.times do 
+    Student.create({
+        name: Faker::Name.first_name,
+        age: Faker::Number.between(from: 18, to: 23),
+        level: "KCSE GRADUATE",
+        from: Faker::Address.country,
+         course: Faker::Science.science(:formal, :applied)
+    })
+end
